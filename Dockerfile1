@@ -1,0 +1,11 @@
+FROM khozzy/selenium-python-chrome:latest
+ENV name="bala"
+
+RUN  mkdir -p ~/app
+WORKDIR  ~/app
+
+COPY first.py .
+RUN find ~/ -name python
+RUN find ~/ -name chrome
+#CMD ["sh", "-c", "echo $name"]
+CMD ["/usr/local/bin/python", "first.py"]
